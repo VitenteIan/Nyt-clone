@@ -1,0 +1,16 @@
+{
+  "name": "appsdevs",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "parcel build --public-url https://VitenteIan.github.io/Nyt-clone src/index.html",
+    "dev": "parcel serve src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

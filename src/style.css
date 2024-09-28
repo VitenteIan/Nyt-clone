@@ -1,0 +1,184 @@
+*{
+    box-sizing: content-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    background: url('img/OIF.jpeg') no-repeat center fixed;
+    background-size: cover;
+}
+header{
+    background-color: #495057;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px 0 rgba(18, 45, 134, 0.3);
+}
+
+/*nav,.inputSearch{
+    display: none;
+}*/
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+nav ul li{
+    cursor: pointer;
+}
+nav ul li:hover{
+    color: #a3b18a;
+}
+.inputSearch{
+    display: flex; 
+    align-items: center;
+    height: 40px;
+    width: 400px;
+    background-color: gray;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 1.5px solid gray;
+}
+.inputSearch input{
+    width: 100%;
+    height: 100%;
+    padding: 0% 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.inputSearch span{
+    width: 70px;
+    background-color: gray;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+}
+.menuBtn{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuBtn:hover{
+    background-color: #a3b18a;
+    color: white;
+}
+.desktop{
+    display: none;
+}
+
+@media all and (min-width:700px){
+    header{
+        padding: 5px 30px;
+    }
+    .desktop{
+        display: flex;
+    }
+    .menuBtn{
+        display: none;
+    }
+}
+
+/*****mobile*****/
+.mobile{
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    max-width: 700px;
+    background-color: white;
+    height: calc(100% - 150px);
+}
+.mobile nav,
+.mobile nav ul{
+    flex-direction: column;
+}
+.mobile .inputSearch{
+    height: 35px;
+    width: 95%;
+}
+.hidden{
+    display: none;
+}
+@media all and (min-width:700px){
+    .mobile{
+        display: none;
+    }
+}
+
+/****css card***/
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin: auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    box-shadow: 7px 7px 25px 1px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid white; 
+    transition: transform 0.3s ease; 
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    border-color: #a3b18a; 
+}
+.card img{
+    min-height: 200px;
+    max-height: 210px;
+    background-color: #6c757d;
+}
+.card h4,
+.card div{
+    padding: 5px 10px;
+    margin: 0;
+}
+.politics{
+    display: flex;
+    align-items: center;
+    color: #929292;
+}
+.politics p{
+    margin: 0;
+    font-size: 14px;
+}
+.politics span{
+    padding: 0px 10px;
+}
+.desc{
+    overflow: hidden;
+    display: -webkit-box;
+    /*-webkit-line-clamp: 5;*/
+    -webkit-box-orient: vertical;
+    margin:0;
+}
+
+@media all and (min-width:700px) {
+    main{
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card h4,
+.card div{
+    padding: 5px 15px;
+}
+}
